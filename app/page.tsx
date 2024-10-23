@@ -54,7 +54,7 @@ const ExampleJsx = () => {
       <div className="grid md:grid-cols-3 gap-4 mt-6 not-prose">
         <Link
           className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts"
+          href="/posts?type=projekt"
         >
           <Pen size={32} />
           <span>
