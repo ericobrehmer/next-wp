@@ -69,7 +69,7 @@ export default async function Page({
               <PaginationItem>
                 <PaginationPrevious
                   className={page === 1 ? "pointer-events-none text-muted" : ""}
-                  href={`/posts?page=${Math.max(page - 1, 1)}${
+                  href={`/projekt?page=${Math.max(page - 1, 1)}${
                     category ? `&category=${category}` : ""
                   }${author ? `&author=${author}` : ""}${
                     tag ? `&tag=${tag}` : ""
@@ -86,7 +86,7 @@ export default async function Page({
                   className={
                     page === totalPages ? "pointer-events-none text-muted" : ""
                   }
-                  href={`/posts?page=${Math.min(page + 1, totalPages)}${
+                  href={`/projekt?page=${Math.min(page + 1, totalPages)}${
                     category ? `&category=${category}` : ""
                   }${author ? `&author=${author}` : ""}${
                     tag ? `&tag=${tag}` : ""
