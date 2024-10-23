@@ -31,7 +31,7 @@ export async function getAllPosts(filterParams?: {
   tag?: string;
   category?: string;
 }): Promise<Post[]> {
-  const url = getUrl("/wp-json/wp/v2/projekt", { author: filterParams?.author, tags: filterParams?.tag, categories: filterParams?.category });
+  const url = getUrl("/wp-json/wp/v2/posts", { author: filterParams?.author, tags: filterParams?.tag, categories: filterParams?.category });
   const response = await fetch(url);
   const posts: Post[] = await response.json();
   return posts;
