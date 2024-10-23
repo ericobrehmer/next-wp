@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "dev.adon-line.de",
+        hostname: process.env.WORDPRESS_HOSTNAME,
         port: "",
         pathname: "/**",
       },
