@@ -42,7 +42,7 @@ export default async function Page({
   return (
     <Section>
       <Container>
-        <h1>Posts</h1>
+        <h1>Projekte</h1>
         <FilterPosts
           authors={authors}
           tags={tags}
