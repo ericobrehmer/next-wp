@@ -44,6 +44,41 @@ export type Post = {
   tags: number[];
 };
 
+export type Projekt = {
+  id: number;
+  date: string;
+  date_gmt: string;
+  guid: {
+    rendered: string;
+  };
+  modified: string;
+  modified_gmt: string;
+  slug: string;
+  status: "publish" | "future" | "draft" | "pending" | "private";
+  type: string;
+  link: string;
+  title: {
+    rendered: string;
+  };
+  content: {
+    rendered: string;
+    protected: boolean;
+  };
+  excerpt: {
+    rendered: string;
+    protected: boolean;
+  };
+  author: number;
+  featured_media: number;
+  comment_status: "open" | "closed";
+  ping_status: "open" | "closed";
+  sticky: boolean;
+  template: string;
+  meta: any[];
+  categories: number[];
+  tags: number[];
+};
+
 export type Category = {
   id: number;
   count: number;
