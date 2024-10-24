@@ -54,8 +54,8 @@ export default async function Page({
 
         {paginatedPosts.length > 0 ? (
           <div className="grid md:grid-cols-3 gap-4 z-0">
-            {paginatedPosts.map((post: any) => (
-              <PostCard key={post.id} projekt={post} />
+            {paginatedPosts.map((post: any, index) => (
+              <PostCard key={post.id} projekt={post} num={index}  />
             ))}
           </div>
         ) : (
@@ -70,7 +70,7 @@ export default async function Page({
               <PaginationItem>
                 <PaginationPrevious
                   className={page === 1 ? "pointer-events-none text-muted" : ""}
-                  href={`/projekt?page=${Math.max(page - 1, 1)}${
+                  href={`/projekte?page=${Math.max(page - 1, 1)}${
                     category ? `&category=${category}` : ""
                   }${author ? `&author=${author}` : ""}${
                     tag ? `&tag=${tag}` : ""
@@ -78,7 +78,7 @@ export default async function Page({
                 />
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink href={`/posts?page=${page}`}>
+                <PaginationLink href={`/projekte?page=${page}`}>
                   {page}
                 </PaginationLink>
               </PaginationItem>
@@ -87,7 +87,7 @@ export default async function Page({
                   className={
                     page === totalPages ? "pointer-events-none text-muted" : ""
                   }
-                  href={`/projekt?page=${Math.min(page + 1, totalPages)}${
+                  href={`/projekte?page=${Math.min(page + 1, totalPages)}${
                     category ? `&category=${category}` : ""
                   }${author ? `&author=${author}` : ""}${
                     tag ? `&tag=${tag}` : ""

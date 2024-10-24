@@ -10,9 +10,15 @@ import {
   getCategoryById,
 } from "@/lib/wordpress";
 
-export default async function PostCard({ projekt }: { projekt: Projekt }) {
+type Props = { projekt: Projekt; num: number };
+
+export default async function PostCard({ projekt, num } : Props) {
   const media = await getFeaturedMediaById(projekt.featured_media);
   const author = await getAuthorById(projekt.author);
+  let show = false;
+  if (num == 0) {
+    show = true;
+  }
   const date = new Date(projekt.date).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
@@ -22,7 +28,7 @@ export default async function PostCard({ projekt }: { projekt: Projekt }) {
 
   return (
     <Link
-      href={`/projekt/${projekt.slug}`}
+      href={`/projekte/${projekt.slug}`}
       className={cn(
         "border p-4 bg-accent/30 rounded-lg group flex justify-between flex-col not-prose gap-8",
         "hover:bg-accent/75 transition-all"
@@ -36,6 +42,7 @@ export default async function PostCard({ projekt }: { projekt: Projekt }) {
             alt={projekt.title.rendered}
             width={400}
             height={200}
+            priority={show}
           />
         </div>
         <div
