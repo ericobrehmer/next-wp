@@ -64,10 +64,6 @@ export type Projekt = {
     rendered: string;
     protected: boolean;
   };
-  excerpt: {
-    rendered: string;
-    protected: boolean;
-  };
   author: number;
   featured_media: number;
   comment_status: "open" | "closed";

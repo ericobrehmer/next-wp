@@ -52,11 +52,11 @@ export default function FilterPosts({
     } else {
       newParams.set(type, value);
     }
-    router.push(`/posts?${newParams.toString()}`);
+    router.push(`/projekt?${newParams.toString()}`);
   };
 
   const handleResetFilters = () => {
-    router.push("/posts");
+    router.push("/projekt");
   };
 
   return (
