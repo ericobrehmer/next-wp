@@ -16,7 +16,7 @@ export default async function PostCard({ projekt, num } : Props) {
   const media = await getFeaturedMediaById(projekt.featured_media);
   const author = await getAuthorById(projekt.author);
   let show = false;
-  if (num == 0) {
+  if (num < 2) {
     show = true;
   }
   const date = new Date(projekt.date).toLocaleDateString("en-US", {
