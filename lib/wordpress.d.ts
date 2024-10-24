@@ -68,7 +68,6 @@ export type Projekt = {
   featured_media: number;
   comment_status: "open" | "closed";
   ping_status: "open" | "closed";
-  sticky: boolean;
   template: string;
   meta: any[];
   categories: number[];
