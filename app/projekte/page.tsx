@@ -4,7 +4,7 @@ import {
   getAllTags,
   getAllCategories,
 } from "@/lib/wordpress";
-// hallo
+
 import {
   Pagination,
   PaginationContent,

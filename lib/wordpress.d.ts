@@ -10,6 +10,7 @@ export type Post = {
   slug: string;
   status: "publish" | "future" | "draft" | "pending" | "private";
   type: string;
+  hallo: string;
   link: string;
   title: {
     rendered: string;
