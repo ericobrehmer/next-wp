@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/pagination";
 
 import { Section, Container } from "@/components/craft";
-import PostCard from "@/components/posts/post-card";
+import PostCard from "@/components/projekte/post-card";
 import FilterPosts from "./filter";
 
 export default async function Page({
@@ -55,7 +55,7 @@ export default async function Page({
         {paginatedPosts.length > 0 ? (
           <div className="grid md:grid-cols-3 gap-4 z-0">
             {paginatedPosts.map((post: any) => (
-              <PostCard key={post.id} post={post} />
+              <PostCard key={post.id} projekt={post} />
             ))}
           </div>
         ) : (
