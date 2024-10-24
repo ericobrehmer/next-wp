@@ -3,10 +3,12 @@ export const mainMenu = {
   home: "/",
   about: "https://github.com/9d8dev/next-wp",
   blog: "/posts",
+  projekte: "/projekte",
 };
 
 export const contentMenu = {
   categories: "/posts/categories",
   tags: "/posts/tags",
   authors: "/posts/authors",
+  projekte: "/projekte",
 };

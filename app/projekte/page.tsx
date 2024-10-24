@@ -1,5 +1,5 @@
 import {
-  getAllPosts,
+  getAllProjekts,
   getAllAuthors,
   getAllTags,
   getAllCategories,
@@ -24,7 +24,8 @@ export default async function Page({
   searchParams: { [key: string]: string | undefined };
 }) {
   const { author, tag, category, page: pageParam } = searchParams;
-  const posts = await getAllPosts({ author, tag, category });
+  //const posts = await getAllPosts({ author, tag, category });
+  const posts = await getAllProjekts({ author, tag, category });
   const authors = await getAllAuthors();
   const tags = await getAllTags();
   const categories = await getAllCategories();
@@ -69,7 +70,7 @@ export default async function Page({
               <PaginationItem>
                 <PaginationPrevious
                   className={page === 1 ? "pointer-events-none text-muted" : ""}
-                  href={`/posts?page=${Math.max(page - 1, 1)}${
+                  href={`/projekt?page=${Math.max(page - 1, 1)}${
                     category ? `&category=${category}` : ""
                   }${author ? `&author=${author}` : ""}${
                     tag ? `&tag=${tag}` : ""
@@ -86,7 +87,7 @@ export default async function Page({
                   className={
                     page === totalPages ? "pointer-events-none text-muted" : ""
                   }
-                  href={`/posts?page=${Math.min(page + 1, totalPages)}${
+                  href={`/projekt?page=${Math.min(page + 1, totalPages)}${
                     category ? `&category=${category}` : ""
                   }${author ? `&author=${author}` : ""}${
                     tag ? `&tag=${tag}` : ""
