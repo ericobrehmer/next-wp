@@ -16,6 +16,7 @@ import {
 
 import { Section, Container } from "@/components/craft";
 import PostCard from "@/components/projekte/post-card";
+import Feature from "@/components/projekte/feature";
 import FilterPosts from "./filter";
 
 export default async function Page({
@@ -43,6 +44,9 @@ export default async function Page({
     <Section>
       <Container>
         <h1>Projekte</h1>
+
+        <Feature />
+
         <FilterPosts
           authors={authors}
           tags={tags}
