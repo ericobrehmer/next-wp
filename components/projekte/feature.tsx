@@ -18,6 +18,7 @@ const Feature = () => {
             src={Placeholder}
             alt="placeholder"
             className="fill object-cover"
+            priority={true}
           />
         </div>
         <div className="flex flex-col gap-6 py-8">
